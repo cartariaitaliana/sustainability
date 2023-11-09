@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Ortica Light";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/OrticaLinear-Light.woff2") format("woff2");
+}
+
+html{
+    font-family: "Ortica Light";
+    letter-spacing: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #002f57; 
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
