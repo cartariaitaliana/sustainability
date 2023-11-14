@@ -4,15 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <section class="main">
-        <h1>Sustainability is the future of luxury</h1>
-        <h2>Coming soon...</h2>
+
+    <section id="header">
+        <header class="header max-width">
+            <img class="header_logo" src="immagini/logo cartaria.svg" alt="LiiT | Cartaria Italiana">
+            <div class="hamburger_menu" onclick="toggleMenu()"></div>
+        </header>
+
+        <div class="menu_overlay" id="menuOverlay">
+            <div class="menu">
+                <div>
+                    <a class="menu_element" href="#hero" onclick="toggleMenu()">Home</a>
+                </div>
+                <div>
+                    <a class="menu_element" href="#rivestimenti" onclick="toggleMenu()">Rivestimenti</a>
+                </div>
+                <div>
+                    <a class="menu_element" href="#nobilitazioni" onclick="toggleMenu()">Nobilitazioni</a>
+                </div>
+                
+            </div>
+        </div>
     </section>
-        
-   
+
+    <section id="hero">
+        <div class="hero max-width">
+            <h1 class="hero_title">Sustainability is the new luxuxry</h1>
+            <p class="hero_text">
+                Quando il <span class="highlight">lusso</span> incontra la <span class="highlight">sostenibilità</span> ed è impreziosito da <span class="highlight">dettagli</span> unici, nascono soluzioni meravigliose, come questo biglietto da visita personalizzato.
+            </p>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+            
+        </div>
+    </section>
     
+    <section id="main_content" class="animated_content">
+        <div class="main_content max-width">
+            <h2>
+                Un oggetto che in poco spazio vuole dire tante cose e lo fa utilizzando diversi canali comunicativi, per un’esperienza multisensoriale.
+            </h2>
+            <p class="main_content-right">
+                <span class="highlight">L’effetto materico</span> dato dalla texture in rilievo della carta Corvon Rust, permette di sollecitare il <span class="highlight">senso del tatto</span>, invitando le persone a soffermarsi su questa piacevole sensazione.
+            </p>
+            <p class="main_content-left">
+                <span class="highlight">La cura dei dettagli</span>, come la stampa oro a caldo del logo al centro, sorprende la <span class="highlight">vista</span>, che noterà un particolare che risplende ed impreziosisce il biglietto.
+            </p>
+            <p class="main_content-right">
+                Lo <span class="highlight">spessore</span> del biglietto stesso, che nasce dall’unione di tre tipologie di carte, comunica <span class="highlight">importanza</span>, presenza.
+            </p>
+            <p class="main_content-left">
+                La scelta di carte pregiate, certificate, che derivano da processi di <span class="highlight">upcycling</span> parlano dell’attenzione verso la <span class="highlight">sostenibilità</span>.
+            </p>
+            
+        </div>
+    </section>
+
+    <section id="main_content-bottom" style="background-color: #FFFFFF" class="animated_content">
+        <div class="main_content-bottom">
+            <h2>Scopri con noi come realizzare oggetti unici</h2>
+            <p>
+                Che attraverso la scelta attenta delle consistenze dei materiali, dei colori, delle nobilitazioni, delle tecniche di stampa, comunichino il tuo messaggio amplificandolo a più sensi possibili per un’esperienza immersiva, che lascia il segno.
+            </p>
+        </div>
+    </section>
+    
+    <section id="rivestimenti" class="animated_content" style="background-color: #F9B09B;">
+        <div class="rivestimenti max-width">
+            <h2>Rivestimenti</h2>
+            <p>Un'anteprima di alcuni rivestimenti dispobibili</p>
+            <h3>Corvon Rock</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+            <ul>
+                <li>50% and over from recycled fibres</li>
+                <li>Completely recyclable</li>
+                <li>PVC free</li>
+                <li>FSC certified</li>
+            </ul>
+            <h3>Ecorel Pure Fibra</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+            <ul>
+                <li>50% and over from recycled fibres</li>
+                <li>Completely recyclable</li>
+                <li>PVC free</li>
+                <li>FSC certified</li>
+            </ul>
+            <h3>Toile Ocean</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+            <ul>
+                <li>50% and over from recycled fibres</li>
+                <li>Completely recyclable</li>
+                <li>PVC free</li>
+                <li>FSC certified</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="nobilitazioni" class="animated_content" style="background-color: #B9CABB">
+        <div class="nobilitazioni max-width">
+            <h2>Rivestimenti</h2>
+            <p>Un'anteprima di alcuni rivestimenti dispobibili</p>
+    
+            <h3>Stampa a caldok</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+            <h3>Serigrafia spessorata</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+    
+            <h3>Bassorilievo</h3>
+            <div class="hero_image">
+                <img src="immagini/hero.png" alt="SAM Academy - Business card">
+            </div>
+    
+        </div>
+    </section>
+    
+    <section id="contatti" class="animated_content">
+        <div id="contatti" class="contatti max-width">
+            <h2>Scopri con noi come realizzare progetti unici</h2>
+            <a href="" class="button">Scrivici</a>
+            <a href="" class="button">Chiamaci</a>
+        </div>
+    </section>
+    
+    <section id="footer" class="animated_content">
+        <div class="footer max-width"></div>
+    </section>
+    
+    
+    
+   
+
 </body>
 </html>
