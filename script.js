@@ -3,7 +3,7 @@
 const lenis = new Lenis()
 
 lenis.on('scroll', (e) => {
-  console.log(e)
+
 })
 
 function raf(time) {
@@ -13,8 +13,9 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
+
 // GSAP animation configuration
-const animationDuration = .2;
+const animationDuration = .3;
 
 function toggleMenu() {
     var body = document.body;
@@ -29,7 +30,6 @@ function toggleMenu() {
         gsap.to(menuOverlay, {
             display: "flex",
             y: 0,
-            opacity: 1,
             duration: animationDuration
         });
         gsap.to(menu, {
@@ -46,6 +46,23 @@ function toggleMenu() {
             stagger: .1
         })
 
+        gsap.to("#barra1", {
+            rotation: 45,
+            duration: .4,
+            y: 6,
+        })
+          
+        gsap.to("#barra2", {
+            duration: .4,
+            opacity: 0,
+        })
+        
+        gsap.to("#barra3", {
+            rotation: -45,
+            duration: .4,
+            y: -6,
+        })
+
     } else {
         gsap.to(".menu_element", {
             opacity: 0,
@@ -56,8 +73,7 @@ function toggleMenu() {
         // If the menu is closing
         gsap.to(menuOverlay, {
             delay: .5,
-            y: -1000,
-            opacity: 0,
+            y: "-100vh",
             duration: animationDuration,
             onComplete: hideMenu });
             
@@ -65,6 +81,23 @@ function toggleMenu() {
             delay: .2,
             duration: animationDuration,
             ease: "power2.in" });
+
+        gsap.to("#barra1", {
+            rotation: 0,
+            duration: 0.4,
+            y: 0,
+        })
+            
+        gsap.to("#barra2", {
+            duration: .4,
+            opacity: 1,
+        })
+        
+        gsap.to("#barra3", {
+            rotation: 0,
+            duration: .4,
+            y: 0,
+        })
     }
 }
 
@@ -116,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     tl.to("#main_content", {
-        scrollTrigger: ".main_content-right",
         opacity: 1,
         duration: .5,
     });
